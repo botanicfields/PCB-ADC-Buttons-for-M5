@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ALS-PT19
+D Ambient Light Sensor
+K Photo-transister
+F https://en.everlight.com/wp-content/plugins/ItemRelationship/product_files/pdf/ALS-PT19-315C-L177-TR8_V8.pdf
+$ENDCMP
+#
+#End Doc Library
