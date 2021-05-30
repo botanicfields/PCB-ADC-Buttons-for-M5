@@ -5,8 +5,8 @@ a PCB converts 5 buttons into 1 analog output
 # M5 用光センサ・押しボタン 5 基板
 ## Ambient Light Sensor and 5 Buttons for M5
 
-<img src="./image/front.jpeg" width=300>
-<img src="./image/back.jpeg" width=300>
+<img src="./image/front.JPEG" width=300>
+<img src="./image/back.JPEG" width=300>
 
 # 1. 特徴
 
@@ -50,4 +50,4 @@ a PCB converts 5 buttons into 1 analog output
 # 4. 接続例
 　「RGB LED 276 for M5Atom」への接続例です。
 
-<img src="./image/example.jpeg" width=300>
+<img src="./image/example.JPEG" width=300>
