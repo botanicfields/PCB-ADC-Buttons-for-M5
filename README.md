@@ -26,28 +26,29 @@ a PCB converts 5 buttons into 1 analog output
 # 2. 内容
 
 ## 光センサ
+Everlight ALS-PT19
 
-    Everlight ALS-PT19
-    https://jp.everlight.com/wp-content/plugins/ItemRelationship/product_files/pdf/ALS-PT19-315C-L177-TR8_V8.pdf
+https://jp.everlight.com/wp-content/plugins/ItemRelationship/product_files/pdf/ALS-PT19-315C-L177-TR8_V8.pdf
 
 ## ソフトウェア
 
 ### (1) BF_AdcButton.h, BF_Adc_Button.cpp
-    光センサの出力を読み出すプログラム、および 5 個の押しボタンの状態を読み出すプログラムです。JC_Button を流用・改変しています。
-    https://github.com/JChristensen/JC_Button
+光センサの出力を読み出すプログラム、および 5 個の押しボタンの状態を読み出すプログラムです。JC_Button を流用・改変しています。
+
+https://github.com/JChristensen/JC_Button
 
 ### (2) BF_AdcButtonTest.h, BF_Adc_ButtonTest.cpp
-    上記コードを呼び出すテスト用のプログラムです。
+上記コードを呼び出すテスト用のプログラムです。
 
 ### (3) BF-028.ino
-    上記テストプログラムのメインプログラムです。
+上記テストプログラムのメインプログラムです。
 
 # 3. 解説
+Qiita 「ESP32 のアナログ入力で、押しボタン 5 個を判別する」
 
-    Qiita 「ESP32 のアナログ入力で、押しボタン 5 個を判別する」
-    https://qiita.com/BotanicFields/items/15d8d45836a4d2f6c87a
+https://qiita.com/BotanicFields/items/15d8d45836a4d2f6c87a
 
 # 4. 接続例
-　「RGB LED 276 for M5Atom」への接続例です。
+「RGB LED 276 for M5Atom」への接続例です。
 
 <img src="./image/example.JPEG" width=300>
