@@ -4,9 +4,14 @@ a PCB converts 5 buttons into 1 analog output
 
 # M5 用光センサ・押しボタン 5 基板
 ## Ambient Light Sensor and 5 Buttons for M5
+### スイッチサイエンス 委託販売
+
+https://www.switch-science.com/catalog/7227/
 
 <img src="./image/front.JPEG" width=300>
 <img src="./image/back.JPEG" width=300>
+
+
 
 # 1. 特徴
 
