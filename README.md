@@ -4,14 +4,13 @@ a PCB converts 5 buttons into 1 analog output
 
 # M5 用光センサ・押しボタン 5 基板
 ## Ambient Light Sensor and 5 Buttons for M5
-### スイッチサイエンス 委託販売
-
-https://www.switch-science.com/catalog/7227/
 
 <img src="./image/front.JPEG" width=300>
 <img src="./image/back.JPEG" width=300>
 
+### 委託販売: スイッチサイエンス
 
+https://www.switch-science.com/catalog/7227/
 
 # 1. 特徴
 
@@ -40,10 +39,14 @@ https://www.switch-science.com/catalog/6245/)
 
 https://www.switch-science.com/catalog/1048/
 
+M5Stack Basic で、G35, G36, 5V, GND に接続した例
+
+<img src="./image/m5stack.jpeg" width=300>
+
 ## M5 シリーズの GROVE ポート
 
 　M5 シリーズ (ESP32) では、アナログ入力として一般に G32 ～ G39 が使用されます。
-G2, G4, G12 ~ G15, G24 ~ G26 のアナログ入力機能は、Wi-Fi 等が使用しますので、
+G2, G4, G12 ~ G15, G24 ~ G26 のアナログ入力機能は、Wi-Fi 等が使用しますので
 一般には使いづらいです。G0 はプルアップがあるなどアナログ入力には向きません。
 
 | モデル | GROVE | 主な用途 |
