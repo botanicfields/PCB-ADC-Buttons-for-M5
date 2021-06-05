@@ -2,11 +2,19 @@
 // BF-028: Ambient Light Sensor and 5 Buttons of 3.3V Analog Signal and 5V Power
 // test and example
 
-//#define M5STACK
-#define M5ATOM
+#define M5STACK
+//#define M5STICKC
+//#define M5STICKCPLUS
+//#define M5ATOM
 
 #ifdef M5STACK
 #include <M5Stack.h>
+#endif
+#ifdef M5STICKC
+#include <M5StickC.h>
+#endif
+#ifdef M5STICKCPLUS
+#include <M5StickCPlus.h>
 #endif
 #ifdef M5ATOM
 #include <M5Atom.h>
@@ -16,7 +24,7 @@
 #include "BF_AdcButtonTest.h"
 
 // loop contol
-const int ambient_period_ms(5000);  // 5sec
+const int ambient_period_ms(1000);  // 5sec
 const int loop_delay_ms(20);
 int last_ms(0);
 int loop_count(0);
@@ -29,22 +37,36 @@ void setup()
   const bool serial_enable(true);
   const bool i2c_enable(true);
   M5.begin(lcd_enable, sd_enable, serial_enable, i2c_enable);
-
-  const int analog_port_button_pin(35);  // GPIO33
-  const int ambient_light_pin(36);       // GPIO34
+  const int analog_port_button_pin(35);  // GPIO35 <NOT GROVE-A PORT> 
+  const int ambient_light_pin(36);       // GPIO36 <NOT GROVE-A PORT>
+#endif
+#ifdef M5STICKC
+  const bool lcd_enable(true);
+  const bool power_enable(true);
+  const bool serial_enable(true);
+  M5.begin(lcd_enable, power_enable, serial_enable);
+  const int analog_port_button_pin(33);  // GPIO33
+  const int ambient_light_pin(32);       // GPIO32
+#endif
+#ifdef M5STICKCPLUS
+  const bool lcd_enable(true);
+  const bool power_enable(true);
+  const bool serial_enable(true);
+  M5.begin(lcd_enable, power_enable, serial_enable);
+  const int analog_port_button_pin(33);  // GPIO33
+  const int ambient_light_pin(32);       // GPIO32
 #endif
 #ifdef M5ATOM
   const bool serial_enable(true);
   const bool i2c_enable(true);
   const bool display_enable(true);
   M5.begin(serial_enable, i2c_enable, display_enable);
-
-  const int ambient_light_pin(34);       // GPIO34
-  const int analog_port_button_pin(33);  // GPIO33
+  const int analog_port_button_pin(32);  // GPIO32
+  const int ambient_light_pin(26);       // GPIO26 <Wi-Fi CANNOT BE USED>
 #endif
 
-  ambient_light_sensor.Begin(ambient_light_pin);
   AdcButtonBegin(analog_port_button_pin);
+  ambient_light_sensor.Begin(ambient_light_pin);
 
   loop_count = 0;
   last_ms = millis();
