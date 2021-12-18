@@ -2,10 +2,10 @@
 // BF-028: Ambient Light Sensor and 5 Buttons of 3.3V Analog Signal and 5V Power
 // test and example
 
-#define M5STACK
+//#define M5STACK
 //#define M5STICKC
 //#define M5STICKCPLUS
-//#define M5ATOM
+#define M5ATOM
 
 #ifdef M5STACK
 #include <M5Stack.h>
@@ -26,7 +26,7 @@
 // loop contol
 const int ambient_period_ms(1000);  // 5sec
 const int loop_delay_ms(20);
-int last_ms(0);
+unsigned int last_ms(0);
 int loop_count(0);
 
 void setup()
